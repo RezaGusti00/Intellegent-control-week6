@@ -34,8 +34,8 @@ def combined_detection(image_path):
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
-    cv2.imwrite("combined_result.png", combined)
+    cv2.imwrite("combined_result.jpg", combined)
 
 # Contoh penggunaan
 if __name__ == "__main__":
-    combined_detection("fotokereta.png")
+    combined_detection("Fotorel.jpg")

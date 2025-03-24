@@ -33,4 +33,4 @@ def canny_edge_detection(image_path):
 
 # Contoh penggunaan
 if __name__ == "__main__":
-    canny_edge_detection("fotokereta.png")
+    canny_edge_detection("Fotorel.jpg")

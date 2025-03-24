@@ -22,4 +22,4 @@ def detect_rail_lane(image_path):
 
 # Contoh penggunaan
 if __name__ == "__main__":
-    detect_rail_lane("IMG_1144.jpg")
+    detect_rail_lane("Fotorel.jpg")
