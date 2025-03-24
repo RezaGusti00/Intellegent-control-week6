@@ -1,0 +1,35 @@
+Analisis dan Diskusi Canny Edge Detection & Lane Detection with Instance Segmentation
+
+•	Analisis Hasil :
+
+1.	Seberapa baik deteksi jalur dengan Instance Segmentation dibandingkan Canny?
+Jawab : 
+
+Deteksi jalur menggunakan Instance Segmentation dengan YOLOv8-seg sesuai hasil praktikum lebih akurat dibandingkan Canny Edge Detection karena mampu mengenali bentuk rel secara lebih kompleks dan mengabaikan gangguan seperti rumput atau bayangan. Sedangkan, Canny hanya mendeteksi tepi berdasarkan perubahan intensitas piksel, sehingga lebih rentan terhadap noise dan perubahan pencahayaan.
+
+2.	Apakah kombinasi kedua metode dapat meningkatkan akurasi?
+ Jawab :
+
+Kombinasi metode Instance Segmentation dan Canny Edge Detection dapat meningkatkan akurasi deteksi jalur. Instance Segmentation dapat digunakan untuk segmentasi awal, sedangkan Canny dapat membantu memperjelas batas jalur rel yang kurang terdeteksi. Kombinasi ini dapat meningkatkan ketahanan terhadap kondisi lingkungan yang sulit, seperti pencahayaan rendah atau jalur yang tertutup sebagian.
+
+3.	Apa dampak perubahan parameter Canny (thresholds) terhadap hasil deteksi?
+Jawab :
+
+Parameter threshold pada Canny Edge Detection menentukan sensitivitas terhadap perubahan intensitas piksel. Jika threshold terlalu rendah, banyak noise atau detail kecil yang ikut terdeteksi, menyebabkan hasil yang berantakan. Sebaliknya, jika threshold terlalu tinggi, beberapa bagian jalur rel yang penting bisa terabaikan. Oleh karena itu, tuning parameter threshold perlu disesuaikan dengan kondisi gambar untuk mendapatkan hasil optimal.
+
+•	Diskusi :
+
+1.	Kapan lebih baik menggunakan Canny Edge Detection dibanding Instance Segmentation?
+Jawab :
+
+Canny Edge Detection lebih baik digunakan jika membutuhkan deteksi tepi sederhana dengan komputasi ringan, misalnya dalam sistem real-time yang memiliki keterbatasan perangkat keras. Selain itu, metode ini efektif jika jalur rel memiliki kontras tinggi dengan latar belakang dan noise minimal.
+
+2.	Bagaimana cara meningkatkan deteksi jalur dengan tuning parameter YOLOv8-seg?
+Jawab :
+
+Cara meningkatkan deteksi jalur dengan YOLOv8-seg, dapat dilakukan tuning parameter seperti threshold confidence untuk mengurangi false positive, serta optimizing anchor boxes agar sesuai dengan bentuk jalur rel. Selain itu, augmentasi data seperti perubahan pencahayaan dan sudut pengambilan gambar bisa membantu model lebih adaptif terhadap berbagai kondisi lingkungan.
+
+3.	Bagaimana metode ini dapat diterapkan dalam sistem navigasi kereta otomatis?
+Jawab :
+
+Deteksi jalur menggunakan Instance Segmentation atau kombinasi dengan Canny dapat digunakan dalam sistem navigasi kereta otomatis untuk memberikan informasi posisi jalur secara real-time. Informasi ini dapat membantu dalam menjaga kereta tetap berada di lintasan yang benar, mendeteksi percabangan rel, dan dapat mengidentifikasi potensi hambatan di jalur. Kemudian diintegrasikan dengan sensor lain seperti LiDAR dan GPS yang dapat meningkatkan akurasi sistem navigasi secara keseluruhan.
